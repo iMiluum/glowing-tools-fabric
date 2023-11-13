@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "glowing_tools",
+	"version": "1.0.0+1.19.2",
+	"name": "Glowing Tools",
+	"description": "A simple mod to add glowing tools so you dont need to unequip your shield while mining! Requires LambDynamicLights.",
+	"authors": [
+		"Miluum"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/glowing_tools/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.miluum.glowing_tools.GlowingTools"
+		],
+		"client": [
+			"com.miluum.glowing_tools.GlowingToolsClient"
+		]
+	},
+	"mixins": [
+		"glowing-tools.mixins.json",
+		{
+			"config": "glowing-tools.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"lambdynlights": "2.2.0+1.19.2"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "item.glowing_tools.glowing_netherite_pickaxe": "Glowing Netherite Pickaxe",
+  "item.glowing_tools.glowing_diamond_pickaxe": "Glowing Diamond Pickaxe",
+  "item.glowing_tools.glowing_golden_pickaxe": "Glowing Golden Pickaxe",
+  "item.glowing_tools.glowing_iron_pickaxe": "Glowing Iron Pickaxe",
+  "item.glowing_tools.glowing_stone_pickaxe": "Glowing Stone Pickaxe",
+  "item.glowing_tools.glowing_wooden_pickaxe": "Glowing Wooden Pickaxe",
+  "item.glowing_tools.default.tooltip": "Glows in the dark!",
+  "itemGroup.glowing_tools.tools": "Glowing Tools"
+}
