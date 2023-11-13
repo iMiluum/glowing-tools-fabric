@@ -2,58 +2,43 @@ package com.miluum.glowing_tools;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GlowingTools implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("glowing-tools");
-    public static final Item GLOWING_NETHERITE_PICKAXE = new GlowingPickaxeItem(
-            ToolMaterials.NETHERITE,
-            1,
-            -2.8f,
-            new Item.Settings());
-    public static final Item GLOWING_DIAMOND_PICKAXE = new GlowingPickaxeItem(
-            ToolMaterials.DIAMOND,
-            1,
-            -2.8f,
-            new Item.Settings());
-    public static final Item GLOWING_GOLDEN_PICKAXE = new GlowingPickaxeItem(
-            ToolMaterials.GOLD,
-            1,
-            -2.8f,
-            new Item.Settings());
-    public static final Item GLOWING_IRON_PICKAXE = new GlowingPickaxeItem(
-            ToolMaterials.IRON,
-            1,
-            -2.8f,
-            new Item.Settings());
-    public static final Item GLOWING_STONE_PICKAXE = new GlowingPickaxeItem(
-            ToolMaterials.STONE,
-            1,
-            -2.8f,
-            new Item.Settings());
-    public static final Item GLOWING_WOODEN_PICKAXE = new GlowingPickaxeItem(
-            ToolMaterials.WOOD,
-            1,
-            -2.8f,
-            new Item.Settings());
+    private static final List<ItemStack> itemList = new ArrayList<>();
+
+    private static Item createPickaxeItem(ToolMaterial material){
+        Item createdItem = new GlowingPickaxeItem(
+                material,
+                1,
+                -2.8f,
+                new Item.Settings()
+        );
+        ItemStack createdItemStack = new ItemStack(createdItem);
+        itemList.add(createdItemStack);
+        return createdItem;
+    }
+
+    public static final Item GLOWING_NETHERITE_PICKAXE = createPickaxeItem(ToolMaterials.NETHERITE);
+    public static final Item GLOWING_DIAMOND_PICKAXE = createPickaxeItem(ToolMaterials.DIAMOND);
+    public static final Item GLOWING_GOLDEN_PICKAXE = createPickaxeItem(ToolMaterials.GOLD);
+    public static final Item GLOWING_IRON_PICKAXE = createPickaxeItem(ToolMaterials.IRON);
+    public static final Item GLOWING_STONE_PICKAXE = createPickaxeItem(ToolMaterials.STONE);
+    public static final Item GLOWING_WOODEN_PICKAXE = createPickaxeItem(ToolMaterials.WOOD);
 
     public static final ItemGroup TOOL_GROUP = FabricItemGroupBuilder.create(
                     new Identifier("glowing_tools", "tools"))
             .icon(() -> new ItemStack(GLOWING_DIAMOND_PICKAXE))
             .appendItems(stacks -> {
-                stacks.add(new ItemStack(GLOWING_NETHERITE_PICKAXE));
-                stacks.add(new ItemStack(GLOWING_DIAMOND_PICKAXE));
-                stacks.add(new ItemStack(GLOWING_GOLDEN_PICKAXE));
-                stacks.add(new ItemStack(GLOWING_IRON_PICKAXE));
-                stacks.add(new ItemStack(GLOWING_STONE_PICKAXE));
-                stacks.add(new ItemStack(GLOWING_WOODEN_PICKAXE));
+                stacks.addAll(itemList);
             })
             .build();
 
