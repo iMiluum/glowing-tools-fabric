@@ -1,5 +1,7 @@
 {
   "item.glowing_tools.glowing_diamond_pickaxe": "Dimand Pikakse w burny stick",
-  "item.glowing_tools.glowing_diamond_pickaxe.tooltip": "omg so bright",
+  "item.glowing_tools.glowing_diamond_axe": "Dimand Axe w burny stick",
+
+  "item.glowing_tools.default.tooltip": "omg so bright",
   "itemGroup.glowing_tools.tools": "toolz w burny sticks"
 }
