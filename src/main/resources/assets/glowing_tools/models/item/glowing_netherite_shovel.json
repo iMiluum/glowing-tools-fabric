@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "glowing_tools:item/glowing_netherite_shovel"
+  }
+}
