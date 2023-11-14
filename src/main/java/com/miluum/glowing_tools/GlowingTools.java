@@ -63,6 +63,30 @@ public class GlowingTools implements ModInitializer {
         return createdItem;
     }
 
+    private static Item createSwordItem(ToolMaterial material){
+        Item createdItem = new GlowingSwordItem(
+                material,
+                3,
+                -2.4f,
+                new Item.Settings()
+        );
+        ItemStack createdItemStack = new ItemStack(createdItem);
+        itemList.add(createdItemStack);
+        return createdItem;
+    }
+
+    private static Item createHoeItem(ToolMaterial material, int attackDamage, float attackSpeed){
+        Item createdItem = new GlowingHoeItem(
+                material,
+                attackDamage,
+                attackSpeed,
+                new Item.Settings()
+        );
+        ItemStack createdItemStack = new ItemStack(createdItem);
+        itemList.add(createdItemStack);
+        return createdItem;
+    }
+
     private static void registerItem(String key, Item item) {
         Registry.register(Registry.ITEM, new Identifier("glowing_tools", key), item);
     }
@@ -87,6 +111,20 @@ public class GlowingTools implements ModInitializer {
     public static final Item GLOWING_IRON_SHOVEL = createShovelItem(ToolMaterials.IRON);
     public static final Item GLOWING_STONE_SHOVEL = createShovelItem(ToolMaterials.STONE);
     public static final Item GLOWING_WOODEN_SHOVEL = createShovelItem(ToolMaterials.WOOD);
+
+    public static final Item GLOWING_NETHERITE_SWORD = createSwordItem(ToolMaterials.NETHERITE);
+    public static final Item GLOWING_DIAMOND_SWORD = createSwordItem(ToolMaterials.DIAMOND);
+    public static final Item GLOWING_GOLDEN_SWORD = createSwordItem(ToolMaterials.GOLD);
+    public static final Item GLOWING_IRON_SWORD = createSwordItem(ToolMaterials.IRON);
+    public static final Item GLOWING_STONE_SWORD = createSwordItem(ToolMaterials.STONE);
+    public static final Item GLOWING_WOODEN_SWORD = createSwordItem(ToolMaterials.WOOD);
+
+    public static final Item GLOWING_NETHERITE_HOE = createHoeItem(ToolMaterials.NETHERITE, -4, 0f);
+    public static final Item GLOWING_DIAMOND_HOE = createHoeItem(ToolMaterials.DIAMOND, -3, 0f);
+    public static final Item GLOWING_GOLDEN_HOE = createHoeItem(ToolMaterials.GOLD, 0, -3.0f);
+    public static final Item GLOWING_IRON_HOE = createHoeItem(ToolMaterials.IRON, -2, -1.0f);
+    public static final Item GLOWING_STONE_HOE = createHoeItem(ToolMaterials.STONE, -1, -2.0f);
+    public static final Item GLOWING_WOODEN_HOE = createHoeItem(ToolMaterials.WOOD, 0, -3.0f);
 
     public static final ItemGroup TOOL_GROUP = FabricItemGroupBuilder.create(
                     new Identifier("glowing_tools", "tools"))
@@ -119,5 +157,19 @@ public class GlowingTools implements ModInitializer {
         registerItem("glowing_iron_shovel", GLOWING_IRON_SHOVEL);
         registerItem("glowing_stone_shovel", GLOWING_STONE_SHOVEL);
         registerItem("glowing_wooden_shovel", GLOWING_WOODEN_SHOVEL);
+
+        registerItem("glowing_netherite_sword", GLOWING_NETHERITE_SWORD);
+        registerItem("glowing_diamond_sword", GLOWING_DIAMOND_SWORD);
+        registerItem("glowing_golden_sword", GLOWING_GOLDEN_SWORD);
+        registerItem("glowing_iron_sword", GLOWING_IRON_SWORD);
+        registerItem("glowing_stone_sword", GLOWING_STONE_SWORD);
+        registerItem("glowing_wooden_sword", GLOWING_WOODEN_SWORD);
+
+        registerItem("glowing_netherite_hoe", GLOWING_NETHERITE_HOE);
+        registerItem("glowing_diamond_hoe", GLOWING_DIAMOND_HOE);
+        registerItem("glowing_golden_hoe", GLOWING_GOLDEN_HOE);
+        registerItem("glowing_iron_hoe", GLOWING_IRON_HOE);
+        registerItem("glowing_stone_hoe", GLOWING_STONE_HOE);
+        registerItem("glowing_wooden_hoe", GLOWING_WOODEN_HOE);
     }
 }
