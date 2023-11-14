@@ -81,6 +81,13 @@ public class GlowingTools implements ModInitializer {
     public static final Item GLOWING_STONE_AXE = createAxeItem(ToolMaterials.STONE, 7);
     public static final Item GLOWING_WOODEN_AXE = createAxeItem(ToolMaterials.WOOD);
 
+    public static final Item GLOWING_NETHERITE_SHOVEL = createShovelItem(ToolMaterials.NETHERITE);
+    public static final Item GLOWING_DIAMOND_SHOVEL = createShovelItem(ToolMaterials.DIAMOND);
+    public static final Item GLOWING_GOLDEN_SHOVEL = createShovelItem(ToolMaterials.GOLD);
+    public static final Item GLOWING_IRON_SHOVEL = createShovelItem(ToolMaterials.IRON);
+    public static final Item GLOWING_STONE_SHOVEL = createShovelItem(ToolMaterials.STONE);
+    public static final Item GLOWING_WOODEN_SHOVEL = createShovelItem(ToolMaterials.WOOD);
+
     public static final ItemGroup TOOL_GROUP = FabricItemGroupBuilder.create(
                     new Identifier("glowing_tools", "tools"))
             .icon(() -> new ItemStack(GLOWING_DIAMOND_PICKAXE))
@@ -106,5 +113,11 @@ public class GlowingTools implements ModInitializer {
         registerItem("glowing_stone_axe", GLOWING_STONE_AXE);
         registerItem("glowing_wooden_axe", GLOWING_WOODEN_AXE);
 
+        registerItem("glowing_netherite_shovel", GLOWING_NETHERITE_SHOVEL);
+        registerItem("glowing_diamond_shovel", GLOWING_DIAMOND_SHOVEL);
+        registerItem("glowing_golden_shovel", GLOWING_GOLDEN_SHOVEL);
+        registerItem("glowing_iron_shovel", GLOWING_IRON_SHOVEL);
+        registerItem("glowing_stone_shovel", GLOWING_STONE_SHOVEL);
+        registerItem("glowing_wooden_shovel", GLOWING_WOODEN_SHOVEL);
     }
 }

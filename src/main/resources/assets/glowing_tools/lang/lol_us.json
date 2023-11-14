@@ -1,6 +1,25 @@
 {
+
+  "item.glowing_tools.glowing_netherite_pickaxe": "Netherite Pikax w burny stick",
   "item.glowing_tools.glowing_diamond_pickaxe": "Dimand Pikakse w burny stick",
-  "item.glowing_tools.glowing_diamond_axe": "Dimand Axe w burny stick",
+  "item.glowing_tools.glowing_golden_pickaxe": "Golden Pikakse w burny stick",
+  "item.glowing_tools.glowing_iron_pickaxe": "Iron Pikakse w burny stick",
+  "item.glowing_tools.glowing_stone_pickaxe": "Ston Pikkatt w burny stick",
+  "item.glowing_tools.glowing_wooden_pickaxe": "Wuddn Pikkatt w burny stick",
+
+  "item.glowing_tools.glowing_netherite_axe": "Netherite Ax w burny stick",
+  "item.glowing_tools.glowing_diamond_axe": "Dimand Aks w burny stick",
+  "item.glowing_tools.glowing_golden_axe": "Goldan Aks w burny stick",
+  "item.glowing_tools.glowing_iron_axe": "Iron Aks w burny stick",
+  "item.glowing_tools.glowing_stone_axe": "Ston Akx w burny stick",
+  "item.glowing_tools.glowing_wooden_axe": "teh furst chopper w burny stick",
+
+  "item.glowing_tools.glowing_netherite_shovel": "Netherite Shuvl w burny stick",
+  "item.glowing_tools.glowing_diamond_shovel": "Dimand Spoon w burny stick",
+  "item.glowing_tools.glowing_golden_shovel": "Goldan Shaval w burny stick",
+  "item.glowing_tools.glowing_iron_shovel": "Iron Shaval w burny stick",
+  "item.glowing_tools.glowing_stone_shovel": "stone spoon w burny stick",
+  "item.glowing_tools.glowing_wooden_shovel": "Wuddn Shuvl w burny stick",
 
   "item.glowing_tools.default.tooltip": "omg so bright",
   "itemGroup.glowing_tools.tools": "toolz w burny sticks"

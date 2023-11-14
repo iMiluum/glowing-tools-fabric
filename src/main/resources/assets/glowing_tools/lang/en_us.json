@@ -13,6 +13,13 @@
     "item.glowing_tools.glowing_stone_axe": "Glowing Stone Axe",
     "item.glowing_tools.glowing_wooden_axe": "Glowing Wooden Axe",
 
+    "item.glowing_tools.glowing_netherite_shovel": "Glowing Netherite Shovel",
+    "item.glowing_tools.glowing_diamond_shovel": "Glowing Diamond Shovel",
+    "item.glowing_tools.glowing_golden_shovel": "Glowing Golden Shovel",
+    "item.glowing_tools.glowing_iron_shovel": "Glowing Iron Shovel",
+    "item.glowing_tools.glowing_stone_shovel": "Glowing Stone Shovel",
+    "item.glowing_tools.glowing_wooden_shovel": "Glowing Wooden Shovel",
+
     "item.glowing_tools.default.tooltip": "Glows in the dark!",
     "itemGroup.glowing_tools.tools": "Glowing Tools"
 }
