@@ -2,7 +2,11 @@ package com.miluum.glowing_tools;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.minecraft.item.*;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
@@ -91,6 +95,11 @@ public class GlowingTools implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("glowing_tools", key), item);
     }
 
+    public static void registerBuiltinPack(String namespace, String path) {
+        ModContainer mod = FabricLoader.getInstance().getModContainer("glowing_tools").orElseThrow();
+        ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(namespace, path), mod, "Legacy Glowing Tools", ResourcePackActivationType.NORMAL);
+    }
+
     public static final Item GLOWING_NETHERITE_PICKAXE = createPickaxeItem(ToolMaterials.NETHERITE);
     public static final Item GLOWING_DIAMOND_PICKAXE = createPickaxeItem(ToolMaterials.DIAMOND);
     public static final Item GLOWING_GOLDEN_PICKAXE = createPickaxeItem(ToolMaterials.GOLD);
@@ -171,5 +180,8 @@ public class GlowingTools implements ModInitializer {
         registerItem("glowing_iron_hoe", GLOWING_IRON_HOE);
         registerItem("glowing_stone_hoe", GLOWING_STONE_HOE);
         registerItem("glowing_wooden_hoe", GLOWING_WOODEN_HOE);
+
+        registerBuiltinPack("glowing_tools", "legacy_glowing_tools");
     }
+
 }
