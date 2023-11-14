@@ -1,5 +1,4 @@
 {
-
   "item.glowing_tools.glowing_netherite_pickaxe": "Netherite Pikax w burny stick",
   "item.glowing_tools.glowing_diamond_pickaxe": "Dimand Pikakse w burny stick",
   "item.glowing_tools.glowing_golden_pickaxe": "Golden Pikakse w burny stick",
@@ -20,6 +19,20 @@
   "item.glowing_tools.glowing_iron_shovel": "Iron Shaval w burny stick",
   "item.glowing_tools.glowing_stone_shovel": "stone spoon w burny stick",
   "item.glowing_tools.glowing_wooden_shovel": "Wuddn Shuvl w burny stick",
+
+  "item.glowing_tools.glowing_netherite_sword": "Netherite Swurd w burny stick",
+  "item.glowing_tools.glowing_diamond_sword": "shini sord w burny stick",
+  "item.glowing_tools.glowing_golden_sword": "Goldan Sord w burny stick",
+  "item.glowing_tools.glowing_iron_sword": "Irun Sowrd w burny stick",
+  "item.glowing_tools.glowing_stone_sword": "Pointy rock w burny stick",
+  "item.glowing_tools.glowing_wooden_sword": "Wuddn Sord w burny stick",
+
+  "item.glowing_tools.glowing_netherite_hoe": "Netherite Hoe w burny stick",
+  "item.glowing_tools.glowing_diamond_hoe": "Deemond Hoe w burny stick",
+  "item.glowing_tools.glowing_golden_hoe": "Goldn Hoe w burny stick",
+  "item.glowing_tools.glowing_iron_hoe": "Irun Hoe w burny stick",
+  "item.glowing_tools.glowing_stone_hoe": "Ston Hoe w burny stick",
+  "item.glowing_tools.glowing_wooden_hoe": "Wuddn Hoe w burny stick",
 
   "item.glowing_tools.default.tooltip": "omg so bright",
   "itemGroup.glowing_tools.tools": "toolz w burny sticks"

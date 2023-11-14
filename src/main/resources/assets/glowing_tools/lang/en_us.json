@@ -20,6 +20,20 @@
     "item.glowing_tools.glowing_stone_shovel": "Glowing Stone Shovel",
     "item.glowing_tools.glowing_wooden_shovel": "Glowing Wooden Shovel",
 
+    "item.glowing_tools.glowing_netherite_sword": "Glowing Netherite Sword",
+    "item.glowing_tools.glowing_diamond_sword": "Glowing Diamond Sword",
+    "item.glowing_tools.glowing_golden_sword": "Glowing Golden Sword",
+    "item.glowing_tools.glowing_iron_sword": "Glowing Iron Sword",
+    "item.glowing_tools.glowing_stone_sword": "Glowing Stone Sword",
+    "item.glowing_tools.glowing_wooden_sword": "Glowing Wooden Sword",
+
+    "item.glowing_tools.glowing_netherite_hoe": "Glowing Netherite Hoe",
+    "item.glowing_tools.glowing_diamond_hoe": "Glowing Diamond Hoe",
+    "item.glowing_tools.glowing_golden_hoe": "Glowing Golden Hoe",
+    "item.glowing_tools.glowing_iron_hoe": "Glowing Iron Hoe",
+    "item.glowing_tools.glowing_stone_hoe": "Glowing Stone Hoe",
+    "item.glowing_tools.glowing_wooden_hoe": "Glowing Wooden Hoe",
+
     "item.glowing_tools.default.tooltip": "Glows in the dark!",
     "itemGroup.glowing_tools.tools": "Glowing Tools"
 }

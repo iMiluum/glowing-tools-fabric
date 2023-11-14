@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "glowing_tools:item/glowing_stone_sword"
+    "layer0": "glowing_tools:item/glowing_wooden_sword"
   }
 }
