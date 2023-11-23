@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
 
   "base": {
       "item": "glowing_tools:glowing_diamond_hoe"
@@ -9,5 +9,8 @@
   },
   "result": {
       "item": "glowing_tools:glowing_netherite_hoe"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
   }
 }
