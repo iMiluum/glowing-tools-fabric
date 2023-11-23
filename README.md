@@ -24,7 +24,6 @@ Currently translated:
 Help with translations would be very appreciated!
 
 ## Requirements
-- Minecraft 1.19.2
 - Fabric Loader and API
 - LambDynamicLights
 

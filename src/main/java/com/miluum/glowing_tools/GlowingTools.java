@@ -1,14 +1,17 @@
 package com.miluum.glowing_tools;
 
+import com.ibm.icu.impl.Row;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.minecraft.item.*;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -92,12 +95,12 @@ public class GlowingTools implements ModInitializer {
     }
 
     private static void registerItem(String key, Item item) {
-        Registry.register(Registry.ITEM, new Identifier("glowing_tools", key), item);
+        Registry.register(Registries.ITEM, new Identifier("glowing_tools", key), item);
     }
 
     public static void registerBuiltinPack(String namespace, String path) {
         ModContainer mod = FabricLoader.getInstance().getModContainer("glowing_tools").orElseThrow();
-        ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(namespace, path), mod, "Legacy Glowing Tools", ResourcePackActivationType.NORMAL);
+        ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(namespace, path), mod, ResourcePackActivationType.NORMAL);
     }
 
     public static final Item GLOWING_NETHERITE_PICKAXE = createPickaxeItem(ToolMaterials.NETHERITE);
@@ -135,12 +138,10 @@ public class GlowingTools implements ModInitializer {
     public static final Item GLOWING_STONE_HOE = createHoeItem(ToolMaterials.STONE, -1, -2.0f);
     public static final Item GLOWING_WOODEN_HOE = createHoeItem(ToolMaterials.WOOD, 0, -3.0f);
 
-    public static final ItemGroup TOOL_GROUP = FabricItemGroupBuilder.create(
-                    new Identifier("glowing_tools", "tools"))
-            .icon(() -> new ItemStack(GLOWING_DIAMOND_PICKAXE))
-            .appendItems(stacks -> {
-                stacks.addAll(itemList);
-            })
+    public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
+            .displayName(Text.translatable("itemGroup.glowing_tools.tools"))
+            .icon(() -> new ItemStack(GLOWING_NETHERITE_PICKAXE))
+            .entries((context, entries) -> entries.addAll(itemList))
             .build();
 
     @Override
@@ -180,6 +181,8 @@ public class GlowingTools implements ModInitializer {
         registerItem("glowing_iron_hoe", GLOWING_IRON_HOE);
         registerItem("glowing_stone_hoe", GLOWING_STONE_HOE);
         registerItem("glowing_wooden_hoe", GLOWING_WOODEN_HOE);
+
+        Registry.register(Registries.ITEM_GROUP, new Identifier("glowing_tools", "tools"), ITEM_GROUP);
 
         registerBuiltinPack("glowing_tools", "legacy_glowing_tools");
     }
