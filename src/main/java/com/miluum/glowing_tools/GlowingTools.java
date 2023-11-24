@@ -48,7 +48,8 @@ public class GlowingTools implements ModInitializer {
                 material,
                 attackDamage,
                 attackSpeed,
-                new Item.Settings()
+                new Item.Settings(),
+                LOGGER
         );
         ItemStack createdItemStack = new ItemStack(createdItem);
         itemList.add(createdItemStack);
