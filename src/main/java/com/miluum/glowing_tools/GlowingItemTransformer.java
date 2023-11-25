@@ -7,10 +7,13 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+
+import java.util.function.Predicate;
 
 import static com.miluum.glowing_tools.GlowingTools.LOGGER;
 
@@ -240,15 +243,21 @@ public class GlowingItemTransformer {
         return new ItemStack(glowingTool);
     }
 
-    public static boolean placeTorch(World world, BlockPos pos, Direction side) {
+    public static boolean placeTorch(World world, BlockPos pos, Direction side, PlayerEntity miner){
+        if(!(world.getBlockState(pos).isSolidBlock(world, pos))) return false;
         BlockState torchState;
         if (side == Direction.UP) torchState = Blocks.TORCH.getDefaultState();
         else if (side == Direction.DOWN) return false;
         else torchState = Blocks.WALL_TORCH.getDefaultState().with(Properties.HORIZONTAL_FACING, side);
-
         BlockPos torchPos = pos.offset(side);
-        if (world.getBlockState(torchPos).isAir()) world.setBlockState(torchPos, torchState);
-        else return false;
+        if (!(world.getBlockState(torchPos).isAir()))  return false;
+        world.setBlockState(torchPos, torchState);
+        world.playSound(null, torchPos, Blocks.TORCH.getSoundGroup(torchState).getPlaceSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+        ItemStack torchStack = new ItemStack(Items.TORCH);
+        if (miner.getInventory().contains(torchStack)) {
+            miner.getInventory().remove(itemStack -> itemStack.getItem() == Items.TORCH, 1, miner.getInventory());
+            return false;
+        }
         return true;
     }
 
@@ -283,7 +292,7 @@ public class GlowingItemTransformer {
     }
 
     public static void transformGlowingTool(ItemStack stack, World world, BlockPos pos, PlayerEntity miner, Direction side){
-        if(GlowingItemTransformer.placeTorch(world, pos, side)) GlowingItemTransformer.turnToVanillaTool(stack, miner);
+        if(GlowingItemTransformer.placeTorch(world, pos, side, miner)) GlowingItemTransformer.turnToVanillaTool(stack, miner);
     }
 
     public static void transformVanillaTool(ItemStack stack, PlayerEntity miner){

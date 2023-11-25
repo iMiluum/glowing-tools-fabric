@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class GlowingPickaxeItem extends PickaxeItem {
+public class GlowingPickaxeItem extends PickaxeItem implements GlowingItem {
     public GlowingPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }

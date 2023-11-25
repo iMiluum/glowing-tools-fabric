@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class GlowingShovelItem extends ShovelItem {
+public class GlowingShovelItem extends ShovelItem implements GlowingItem {
     public GlowingShovelItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }

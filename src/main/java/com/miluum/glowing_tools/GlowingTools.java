@@ -12,6 +12,7 @@ import net.minecraft.item.*;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -91,16 +92,24 @@ public class GlowingTools implements ModInitializer {
             ItemStack stack = player.getStackInHand(hand);
             if (!player.isSneaking()) return ActionResult.PASS;
             if (!(stack.getItem() instanceof ToolItem)) return ActionResult.PASS;
-            if (stack.getItem() instanceof GlowingItem) return ActionResult.PASS;
 
             BlockPos pos = hitResult.getBlockPos();
             BlockState state = world.getBlockState(pos);
-            if (state.getBlock() == Blocks.TORCH || state.getBlock() == Blocks.WALL_TORCH) {
-                world.setBlockState(pos, Blocks.AIR.getDefaultState());
-                GlowingItemTransformer.transformVanillaTool(stack, player);
+
+            if (!(state.getBlock() == Blocks.TORCH || state.getBlock() == Blocks.WALL_TORCH)) return ActionResult.PASS;
+
+            world.setBlockState(pos, Blocks.AIR.getDefaultState());
+            world.playSound(null, pos, Blocks.TORCH.getSoundGroup(state).getBreakSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+            if (stack.getItem() instanceof GlowingItem) {
+
+                player.getInventory().offerOrDrop(new ItemStack(Blocks.TORCH));
                 return ActionResult.SUCCESS;
             }
-            return ActionResult.PASS;
+            else {
+                GlowingItemTransformer.transformVanillaTool(stack, player);
+            }
+            return ActionResult.SUCCESS;
         });
     }
 

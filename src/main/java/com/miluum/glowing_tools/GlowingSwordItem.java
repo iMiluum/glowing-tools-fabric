@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class GlowingSwordItem extends SwordItem {
+public class GlowingSwordItem extends SwordItem implements GlowingItem {
     public GlowingSwordItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
