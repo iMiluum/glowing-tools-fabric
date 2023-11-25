@@ -34,6 +34,8 @@
     "item.glowing_tools.glowing_stone_hoe": "Glowing Stone Hoe",
     "item.glowing_tools.glowing_wooden_hoe": "Glowing Wooden Hoe",
 
-    "item.glowing_tools.default.tooltip": "Glows in the dark!",
+    "item.glowing_tools.default.tooltip.description": "Glows in the dark!",
+    "item.glowing_tools.default.tooltip.instruction1": "Sneak + Right Click to",
+    "item.glowing_tools.default.tooltip.instruction2": "place or pick up torches.",
     "itemGroup.glowing_tools.tools": "Glowing Tools"
 }
