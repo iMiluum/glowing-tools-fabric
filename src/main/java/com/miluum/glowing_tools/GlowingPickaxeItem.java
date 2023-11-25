@@ -23,7 +23,9 @@ public class GlowingPickaxeItem extends PickaxeItem implements GlowingItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.glowing_tools.default.tooltip").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.glowing_tools.default.tooltip.description").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.glowing_tools.default.tooltip.instruction1").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.glowing_tools.default.tooltip.instruction2").formatted(Formatting.GRAY));
     }
 
     @Override
