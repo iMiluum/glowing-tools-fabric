@@ -34,6 +34,8 @@
   "item.glowing_tools.glowing_stone_hoe": "Ston Hoe w burny stick",
   "item.glowing_tools.glowing_wooden_hoe": "Wuddn Hoe w burny stick",
 
-  "item.glowing_tools.default.tooltip": "omg so bright",
-  "itemGroup.glowing_tools.tools": "toolz w burny sticks"
+  "itemGroup.glowing_tools.tools": "toolz w burny sticks",
+  "item.glowing_tools.default.tooltip.description": "omg so bright",
+  "item.glowing_tools.default.tooltip.instruction1": "Snik n right paw to",
+  "item.glowing_tools.default.tooltip.instruction2": "put or taek burny stix."
 }
