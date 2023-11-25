@@ -13,6 +13,7 @@ A Minecraft mod to illuminate your experience while mining, without having to un
 
 - Durability and enchantments get reset on craft
 - Legacy items look like normal tools because of the durability bar. (Won't fix)
+- Torches only placeable on solid blocks (expected behavior for now) 
 
 ## Translations
 
