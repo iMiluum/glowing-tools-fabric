@@ -79,29 +79,7 @@ public class GlowingTools implements ModInitializer {
 
         registerBuiltinPack("glowing_tools", "legacy_glowing_tools");
 
-        UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
-            ItemStack stack = player.getStackInHand(hand);
-            if (!player.isSneaking()) return ActionResult.PASS;
-            if (!(stack.getItem() instanceof ToolItem)) return ActionResult.PASS;
-
-            BlockPos pos = hitResult.getBlockPos();
-            BlockState state = world.getBlockState(pos);
-
-            if (!(state.getBlock() == Blocks.TORCH || state.getBlock() == Blocks.WALL_TORCH)) return ActionResult.PASS;
-
-            world.setBlockState(pos, Blocks.AIR.getDefaultState());
-            world.playSound(null, pos, Blocks.TORCH.getSoundGroup(state).getBreakSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
-
-            if (stack.getItem() instanceof GlowingItem) {
-
-                player.getInventory().offerOrDrop(new ItemStack(Blocks.TORCH));
-                return ActionResult.SUCCESS;
-            }
-            else {
-                GlowingItemTransformer.transformVanillaTool(stack, player);
-            }
-            return ActionResult.SUCCESS;
-        });
+        UseBlockCallback.EVENT.register(GlowingItemTransformer::pickUpTorch);
     }
 
 }
