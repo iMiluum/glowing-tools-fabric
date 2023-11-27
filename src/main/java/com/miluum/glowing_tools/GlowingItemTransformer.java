@@ -9,6 +9,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -261,6 +264,29 @@ public class GlowingItemTransformer {
         return true;
     }
 
+    public static ActionResult pickUpTorch(PlayerEntity player, World world, Hand hand, BlockHitResult hitResult){
+        ItemStack stack = player.getStackInHand(hand);
+        if (!player.isSneaking()) return ActionResult.PASS;
+        if (!(stack.getItem() instanceof ToolItem)) return ActionResult.PASS;
+
+        BlockPos pos = hitResult.getBlockPos();
+        BlockState state = world.getBlockState(pos);
+
+        if (!(state.getBlock() == Blocks.TORCH || state.getBlock() == Blocks.WALL_TORCH)) return ActionResult.PASS;
+
+        world.setBlockState(pos, Blocks.AIR.getDefaultState());
+        world.playSound(null, pos, Blocks.TORCH.getSoundGroup(state).getBreakSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+        if (stack.getItem() instanceof GlowingItem) {
+
+            player.getInventory().offerOrDrop(new ItemStack(Blocks.TORCH));
+            return ActionResult.SUCCESS;
+        }
+        else {
+            GlowingItemTransformer.transformVanillaTool(stack, player);
+        }
+        return ActionResult.SUCCESS;
+    }
 
     public static void copyData(ItemStack stack, ItemStack vanillaToolStack) {
         vanillaToolStack.setDamage(stack.getDamage());
