@@ -1,3 +1,0 @@
-/time set night
-/enchant @a minecraft:sharpness 10
-/enchant @a minecraft:sharpness 5
