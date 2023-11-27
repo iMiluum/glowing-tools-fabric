@@ -39,7 +39,7 @@ public class GlowingSwordItem extends SwordItem implements GlowingItem {
 
         assert miner != null;
         if (miner.isSneaking()) GlowingItemTransformer.transformGlowingTool(stack, world, pos, miner, side);
-        else super.useOnBlock(context);
+        else return super.useOnBlock(context);
 
         return ActionResult.SUCCESS;
     }
