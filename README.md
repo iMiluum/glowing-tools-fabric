@@ -21,6 +21,7 @@ Currently translated:
 
 - English (US)
 - Lolcat
+- Chinese (contributed by [@oritong](https://github.com/oritong), thank you!)
 
 Help with translations would be very appreciated!
 

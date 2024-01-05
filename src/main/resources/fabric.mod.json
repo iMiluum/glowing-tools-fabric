@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing_tools",
-	"version": "1.4.1+1.20.2",
+	"version": "1.4.2+1.20.2",
 	"name": "Glowing Tools",
 	"description": "A simple mod to add glowing tools so you dont need to unequip your shield while mining! Requires LambDynamicLights.",
 	"authors": [
