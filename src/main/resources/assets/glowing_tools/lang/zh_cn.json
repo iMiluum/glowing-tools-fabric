@@ -1,0 +1,41 @@
+{
+    "item.glowing_tools.glowing_netherite_pickaxe": "发光的下界合金镐",
+    "item.glowing_tools.glowing_diamond_pickaxe": "发光的钻石镐",
+    "item.glowing_tools.glowing_golden_pickaxe": "发光的金镐",
+    "item.glowing_tools.glowing_iron_pickaxe": "发光的铁镐",
+    "item.glowing_tools.glowing_stone_pickaxe": "发光的石镐",
+    "item.glowing_tools.glowing_wooden_pickaxe": "发光的木镐",
+
+    "item.glowing_tools.glowing_netherite_axe": "发光的下界合金斧",
+    "item.glowing_tools.glowing_diamond_axe": "发光的钻石斧",
+    "item.glowing_tools.glowing_golden_axe": "发光的金斧",
+    "item.glowing_tools.glowing_iron_axe": "发光的铁斧",
+    "item.glowing_tools.glowing_stone_axe": "发光的石斧",
+    "item.glowing_tools.glowing_wooden_axe": "发光的木斧",
+
+    "item.glowing_tools.glowing_netherite_shovel": "发光的下界合金锹",
+    "item.glowing_tools.glowing_diamond_shovel": "发光的钻石锹",
+    "item.glowing_tools.glowing_golden_shovel": "发光的金锹",
+    "item.glowing_tools.glowing_iron_shovel": "发光的铁锹",
+    "item.glowing_tools.glowing_stone_shovel": "发光的石锹",
+    "item.glowing_tools.glowing_wooden_shovel": "发光的木锹",
+
+    "item.glowing_tools.glowing_netherite_sword": "发光的下界合金剑",
+    "item.glowing_tools.glowing_diamond_sword": "发光的钻石剑",
+    "item.glowing_tools.glowing_golden_sword": "发光的金剑",
+    "item.glowing_tools.glowing_iron_sword": "发光的铁剑",
+    "item.glowing_tools.glowing_stone_sword": "发光的石剑",
+    "item.glowing_tools.glowing_wooden_sword": "发光的木剑",
+
+    "item.glowing_tools.glowing_netherite_hoe": "发光的下界合金锄",
+    "item.glowing_tools.glowing_diamond_hoe": "发光的钻石锄",
+    "item.glowing_tools.glowing_golden_hoe": "发光的金锄",
+    "item.glowing_tools.glowing_iron_hoe": "发光的铁锄",
+    "item.glowing_tools.glowing_stone_hoe": "发光的石锄",
+    "item.glowing_tools.glowing_wooden_hoe": "发光的木锄",
+
+    "item.glowing_tools.default.tooltip.description": "在黑暗中将会照亮周围！",
+    "item.glowing_tools.default.tooltip.instruction1": "潜行并右键一个方块或火把",
+    "item.glowing_tools.default.tooltip.instruction2": "可以在方块上放置或拿起火把",
+    "itemGroup.glowing_tools.tools": "发光工具"
+}
