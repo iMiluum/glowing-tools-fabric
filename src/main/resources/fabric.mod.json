@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "glowing_tools",
-	"version": "1.4.2+1.20.2",
+	"version": "1.4.2+1.20.4",
 	"name": "Glowing Tools",
 	"description": "A simple mod to add glowing tools so you dont need to unequip your shield while mining! Requires LambDynamicLights.",
 	"authors": [
@@ -30,11 +30,11 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.14.24",
-		"minecraft": "~1.20.2",
+		"fabricloader": ">=0.15.11		",
+		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*",
-		"lambdynlights": "2.3.3+1.20.2"
+		"lambdynlights": "2.3.4+1.20.4"
 	},
 	"suggests": {
 	}
